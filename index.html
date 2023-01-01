@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>homePage</title>
+</head>
+<style>
+    :root{
+        --main-color: #aa0ca8;
+        /* --main-color: #6c757d; */
+        --main-color-op:#aa0ca82b;
+        --border-btn : 1px solid #aa0ca8;
+        
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+     #flowerBtn{
+        background: var(--main-color);
+        color: white;
+    }
+    .container{
+        text-align: center;
+
+    }
+
+    .name{
+        font-size: 55px;
+        font-weight: bold;
+    }
+
+    .btn1{
+        color: white;
+        background: var(--main-color);
+        border-radius: 7px;
+    }
+    .btn2{
+        border-radius: 7px;
+        border: var(--border-btn);
+        background: transparent;
+    }
+    .navbar{
+        background: var(--main-color);
+    }
+  #contactBtn:hover{
+    color: white
+  }
+
+  
+
+.weather-app-wrapper {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.searchInput {
+    display: block;
+    width: 100%;
+    background: #f9f7fe;
+    border: none;
+    border-radius: 6px;
+    color: rgba(39, 33, 66, .4);
+    padding: 15px 20px;
+    height: calc(1.5em + .75rem + 2px);
+}
+
+.weather-app {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+    color: #878787;
+    font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+    padding: 40px;
+}
+
+.weather-app ul li {
+    color: rgba(39, 33, 66, .4);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.weather-app ul li span {
+    color: #f65282;
+}
+
+.overview {
+    margin-bottom: 20px;
+}
+
+.weather-temperature img {
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
+
+.weather-temperature strong {
+    color: rgb(33, 33, 33);
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.weather-temperature .units {
+    position: relative;
+    font-size: 16px;
+    top: -34px;
+}
+
+.weather-temperature .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
+}
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
+
+.weather-temperature :hover {
+    text-decoration: none;
+}
+
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.weather-forecast-date {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+    font-size: 13px;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img src="logo-shecodes.png" class="img-fluid" width="100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row d-flex flex-column mt-5">
+            <h2>👀 Hi I am </h2>
+            <p class="name" id="name">❤Azadeh Davari❤</p>
+            <p>🎀 Front-end developer, based in Asia</p>
+        
+        </div>
+        <div class="row d-flex justify-content-center mt-5">
+            <a href="about.html" id="contactBtn" class="btn1 p-2 w-25 text-decoration-none">Contact Me</a>
+            &nbsp;
+            <a href="about.html" class="btn2 p-2 w-25 text-decoration-none" style="color: var(--main-color);">About Me</a>
+        </div>
+        <div class="row mt-5">
+            <div class="d-flex justify-content-center" style="background: var(--main-color-op);">
+                <div class="card w-50 m-5 rounded">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">flowers</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="flower.jpg" class="rounded img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                            </div>
+                        </div>
+                        <a id="flowerBtn" href="#" class="btn mt-3 w-100" >Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+                <p class="name">weather app</p>
+                <p class="fs-5">Some quick example text to build on the card title and make up the bulk of the card's
+                content.Some quick example text to build on the card title and make up the bulk of the card's
+                content.Some quick example text to build on the card title and make up the bulk of the card's
+                content.Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+                <div class="weather-app-wrapper">
+                    <div class="weather-app">
+                        <form id="search-form" class="mb-3 ">
+                            <div class="row">
+                                <div class="col-9">
+                                    <input id="city-input" type="search" placeholder="Type a city.."
+                                        class="searchInput form-control w-100" id="city-input" autocomplete="off" />
+                                </div>
+                                <div class="col-3">
+                                    <input type="submit" value="Search" class="btn btn-primary w-100" />
+                                </div>
+                            </div>
+                        </form>
+                        <div class="overview">
+                            <h1 id="city"></h1>
+                            <ul>
+                                <li>Last updated: <span id="date"></span></li>
+                                <li id="description"></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul>
+                                    <li>Humidity: <span id="humidity"></span>%</li>
+                                    <li>Wind: <span id="wind"></span>km/h</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <div class="clearfix weather-temperature">
+                                    <img id="icon" class="float-left" />
+                                    <div class="float-left">
+                                        <strong id="temperature"></strong>
+                                        <span class="units">
+                                            <a href="#" id="celsius-link" class="active">°C</a> |
+                                            <a href="#" id="fahrenheit-link">°F</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small>
+                        <a href="" target="_blank">Open-source code</a>
+                        by Azade Davari
+                    </small>
+                </div>
+                <div class="col-12">
+                      <a href="#name" class="btn btn-secondary w-25">Launch Weather App</a>
+                </div>
+              
+        </div>
+        <div class="row d-flex flex-column mt-5">
+            <p class="name">yogurt app</p>
+            <p class="fs-5">Some quick example text to build on the card title and make up the bulk of the card's
+            content.Some quick example text to build on the card title and make up the bulk of the card's
+            content.Some quick example text to build on the card title and make up the bulk of the card's
+            content.Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+            <div class="d-flex justify-content-center" style="background: var(--main-color-op);">
+                <div class="card w-50 m-5 rounded">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">flowers</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="yogurt.jpg" class="rounded img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of
+                                    the card's
+                                    content.</p>
+                            </div>
+                        </div>
+                        <a id="flowerBtn" href="#" class="btn mt-3 w-100">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5 mb-5">
+                <a href="#name" class="btn btn-secondary w-25">Launch yogurt App</a>
+            </div>
+        </div>
+    </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
